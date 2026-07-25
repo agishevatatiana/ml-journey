@@ -70,25 +70,30 @@ Python library for data analysis
 ### DataFrame & Series
 **DataFrame** - a table, built from an object whose keys are column names and whose values are arrays; the array's indexes are the table's row indexes, and its values are the values of that column:
 
-pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]})
+`pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]})`
 
-    Yes	No
-0	50	131
-1	21	2
+|   | Yes | No  |
+|---|-----|-----|
+| 0 | 50  | 131 |
+| 1 | 21  | 2   |
 
-Array indexes can be assigned strings: pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]}, index=['A', 'B'])
+Array indexes can be assigned strings: `pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]}, index=['A', 'B'])`
 
-    Yes	No
-A	50	131
-B	21	2
+|   | Yes | No  |
+|---|-----|-----|
+| A | 50  | 131 |
+| B | 21  | 2   |
 
 **Series** - indexed list with name
-pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')
+`pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')`
 
-2015 Sales    30
-2016 Sales    35
-2017 Sales    40
-Name: Product A, dtype: int64
+| Index      | Value |
+|------------|-------|
+| 2015 Sales | 30    |
+| 2016 Sales | 35    |
+| 2017 Sales | 40    |
+
+*Name: Product A, dtype: int64*
 
 We can think of **Series** as a single-column snapshot of a **DataFrame**, and of **DataFrame** as a bunch of **Series**
 
