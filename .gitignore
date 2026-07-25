@@ -218,6 +218,5 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Data
-01-housing-prices/train.csv
-01-housing-prices/test.csv
+external-data
 .DS_Store
