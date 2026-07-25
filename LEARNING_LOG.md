@@ -2,7 +2,7 @@
 
 My daily learning notes and theory reference while training as an ML/AI engineer.
 
-## ML Intro
+## ML Intro - practice folder 01-housing-prices/
 Decision Tree, training data, prediction target (y), features (X), steps to building and using a model, model validation, mean absolute error (MAE), overfitting & underfitting, Random Forests  → [ML Intro](#2026-07-24)
 
 ---
@@ -54,6 +54,53 @@ A model that uses many trees and makes predictions by averaging each component t
 
 ---
 
+
+## Pandas - practice folder 02-housing-eda/
+Pandas, DataFrame & Series, Index-based selection, Label-based selection → [Pandas](#2026-07-25)
+
+---
+
+## 2026-07-25
+**Topics:** Pandas, DataFrame & Series, Index-based selection, Label-based selection
+**Did:** analyse housing data using pandas library
+
+### Pandas
+Python library for data analysis
+
+### DataFrame & Series
+**DataFrame** - a table, built from an object whose keys are column names and whose values are arrays; the array's indexes are the table's row indexes, and its values are the values of that column:
+
+pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]})
+
+    Yes	No
+0	50	131
+1	21	2
+
+Array indexes can be assigned strings: pd.DataFrame({'Yes': [50, 21], 'No': [131, 2]}, index=['A', 'B'])
+
+    Yes	No
+A	50	131
+B	21	2
+
+**Series** - indexed list with name
+pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')
+
+2015 Sales    30
+2016 Sales    35
+2017 Sales    40
+Name: Product A, dtype: int64
+
+We can think of **Series** as a single-column snapshot of a **DataFrame**, and of **DataFrame** as a bunch of **Series**
+
+### Index-based selection (iloc[:,0])
+selecting data based on its numerical position in the data, row - first, column - second; the first element of the range is included and the last one excluded
+
+### Label-based selection (loc[:, ['column1']])
+selecting data based on data index value, row - first, column - second, all elements of the range included, use when string indexes
+
+**Next:** [Intermediate ML](https://www.kaggle.com/learn/intermediate-machine-learning)
+
+---
 
 ## Topic Index
 <!-- Add one line per concept as you write it. Links jump to that day's entry. -->
